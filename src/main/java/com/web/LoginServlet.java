@@ -57,8 +57,10 @@ public class LoginServlet extends HttpServlet {
                 default:
                     resp.sendRedirect("/Load/false.html");
             }
-            //释放资源
-            sqlSession.close();
+        }else{
+            resp.sendRedirect("/Load/false.html");
         }
+        //释放资源
+        sqlSession.close();
     }
 }
