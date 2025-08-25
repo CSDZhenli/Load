@@ -43,25 +43,22 @@ public class LoginServlet extends HttpServlet {
         //调用方法
         PW id = pwMapper.selectIdByPassword(password);
         //判断
-        if(id!=null){
+        if (id != null) {
             int id0 = id.getId();
-            if (id0 == 1) {
-                //调用方法
-                String url = pwMapper.selectUrlById(id0).getUrl();
-                System.out.println("https://www.gonethings.cloud/"+url);
-                resp.sendRedirect("https://www.gonethings.cloud/"+url);
-            }else if (id0 == 2) {
-                //调用方法
-                String url = pwMapper.selectUrlById(id0).getUrl();
-                System.out.println(url);
-                resp.sendRedirect("https://www.bilibili.com/video/"+url);
-            }else {
-                resp.sendRedirect("/Load/false.html");
+            //调用方法
+            String url = pwMapper.selectUrlById(id0).getUrl();
+            switch (id0) {
+                case 1:
+                    resp.sendRedirect("https://www.gonethings.cloud/" + url);
+                    break;
+                case 2:
+                    resp.sendRedirect("https://www.bilibili.com/video/" + url);
+                    break;
+                default:
+                    resp.sendRedirect("/Load/false.html");
             }
-        }else{
-            resp.sendRedirect("/Load/false.html");
+            //释放资源
+            sqlSession.close();
         }
-        //释放资源
-        sqlSession.close();
     }
 }
