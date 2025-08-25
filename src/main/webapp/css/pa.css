@@ -36,17 +36,14 @@ html::before{
     width: 45rem;
     height: 6rem;
     margin-top: 3rem;
-    margin-left: 7.5rem;
     padding: 0 1rem;
     border: 3px solid white;
     border-radius: 0.25rem;
     background: black;
-}
-.box .box1 .p::placeholder {
     color: white;
     font-size: 30px;
 }
-.box .box1 .p:focus{
+.box .box1 .p::placeholder {
     color: white;
     font-size: 30px;
 }
@@ -54,13 +51,13 @@ html::before{
     width: 15rem;
     height: 3rem;
     background: black;
-    border: 2px solid white;
+    align-items: center;
     margin-top: 3rem;
 }
 .box .box1 .login{
     color: white;
     font-size: 30px;
-    margin: 2rem 0 0 22rem;
+    margin: 3rem 0 0 15rem;
     border: none;
 }
 .box .false{
