@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--起别名-->
+    <!--将pojo内每个Java类取别名-->
+    <typeAliases>
+        <typeAlias alias="PW" type="com.pojo.PW"/>
+    </typeAliases>
+    <!--直接扫描pojo类来自动取别名-->
+    <!--<typeAliases>-->
+    <!--    <package name="org.zhenli.pojo"/>-->
+    <!--</typeAliases>-->
+    <!--environments：配置数据库环境信息，可配多个，需通过default切换environments-->
+    <environments default="test">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <!--mysql数据库信息-->
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://38.244.14.44:3306/halo_cxnben"/>
+                <property name="username" value="root"/>
+                <property name="password" value="mysql_kxKiBy"/>
+            </dataSource>
+        </environment>
+        <environment id="test">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <!--mysql数据库信息-->
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://38.244.14.44:3306/halo_cxnben"/>
+                <property name="username" value="root"/>
+                <property name="password" value="mysql_kxKiBy"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <mappers>
+        <!--加载mysql的映射文件-->
+        <!--<mapper resource="org/zhenli/mapper/CeShi2Mapper.xml"/>-->
+        <!--Mapper代理方式-->
+        <package name="com.mapper"/>
+    </mappers>
+</configuration>

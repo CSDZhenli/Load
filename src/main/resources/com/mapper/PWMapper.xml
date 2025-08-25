@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace:名称空间-->
+<mapper namespace="com.mapper.PWMapper">
+    <select id="selectAll" resultType="PW">
+        select * from PW;
+    </select>
+    <!--由输入的Password查看其id-->
+    <select id="selectIdByPassword" resultType="PW">
+        select id from PW where passwords=#{passwords};
+    </select>
+    <!--由id查看其url-->
+    <select id="selectUrlById" resultType="PW">
+        select * from PW where id=#{id};
+    </select>
+</mapper>
