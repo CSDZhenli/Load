@@ -19,7 +19,7 @@
             <dataSource type="POOLED">
                 <!--mysql数据库信息-->
                 <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://1Panel-mysql-xra8:3306/halo_cxnben"/>
+                <property name="url" value="jdbc:mysql://38.244.14.44:3306/halo_cxnben"/>
                 <property name="username" value="root"/>
                 <property name="password" value="mysql_kxKiBy"/>
             </dataSource>
