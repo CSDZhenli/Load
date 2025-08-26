@@ -55,10 +55,10 @@ public class LoginServlet extends HttpServlet {
                     resp.sendRedirect("https://www.bilibili.com/video/" + url);
                     break;
                 default:
-                    resp.sendRedirect("/Load/false.html");
+                    resp.sendRedirect("/false.html");
             }
         }else{
-            resp.sendRedirect("/Load/false.html");
+            resp.sendRedirect("/false.html");
         }
         //释放资源
         sqlSession.close();
