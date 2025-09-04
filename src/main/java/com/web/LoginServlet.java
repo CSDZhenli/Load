@@ -9,6 +9,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -55,9 +56,15 @@ public class LoginServlet extends HttpServlet {
                     resp.sendRedirect("https://www.bilibili.com/video/" + url);
                     break;
                 default:
+                    //创建并发送Cookie对象
+                    Cookie cookie = new Cookie("messager","false");
+                    resp.addCookie(cookie);
                     resp.sendRedirect("/false.html");
             }
         }else{
+            //创建并发送Cookie对象
+            Cookie cookie = new Cookie("the_third","/death.html");
+            resp.addCookie(cookie);
             resp.sendRedirect("/false.html");
         }
         //释放资源
