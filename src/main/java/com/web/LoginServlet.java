@@ -63,7 +63,7 @@ public class LoginServlet extends HttpServlet {
             }
         }else{
             //创建并发送Cookie对象
-            Cookie cookie = new Cookie("the_third","/death.html");
+            Cookie cookie = new Cookie("messager","notthistryagain");
             resp.addCookie(cookie);
             resp.sendRedirect("/false.html");
         }

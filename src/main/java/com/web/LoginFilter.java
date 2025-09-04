@@ -21,7 +21,7 @@ public class LoginFilter implements Filter {
         Cookie[] cookies=req.getCookies();
         if(cookies!=null) {
             for(Cookie cookie:cookies) {
-                if(Objects.equals(cookie.getName(), "the_third") && Objects.equals(cookie.getValue(), "/death.html")) {
+                if(Objects.equals(cookie.getName(), "messager") && Objects.equals(cookie.getValue(), "notthistryagain")) {
                     //
                     filterChain.doFilter(servletRequest, servletResponse);
                 }
