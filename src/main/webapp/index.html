@@ -4,19 +4,25 @@
     <meta charset="UTF-8">
     <title>PASSWORD</title>
     <link rel="stylesheet" href="css/pa.css">
+    <link rel="stylesheet" href="css/login.css"></link>
 </head>
 <body>
-    <div class="box">
-        <div class="box1">
-            <h1 class="t">输入密码</h1>
-            <form method="post" action="/LoginServlet">
-                <input class="p" id="p" type="text" name="password" placeholder="输入你想知道的">
-                <br>
-                <input class="login" id="login" type="submit" value="Login">
-            </form>
-        </div>
+<div class="loading" id="loading">
+    <div class="loading-inner"></div>
+    <p class="loading-text">Loading...</p>
+</div>
+<div class="box">
+    <div class="box1">
+        <h1 class="t">输入密码</h1>
+        <form id="loginFrom" method="post" action="/LoginServlet">
+            <input class="p" id="p" type="text" name="password" placeholder="输入你想知道的">
+            <br>
+            <input class="login" id="login" type="submit" value="Login">
+        </form>
     </div>
+</div>
 <script src="js/pass.js">
 </script>
+<script src="js/login.js"></script>
 </body>
 </html>

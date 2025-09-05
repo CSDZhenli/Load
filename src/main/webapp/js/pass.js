@@ -1,5 +1,5 @@
-var login = document.getElementById("login");
-var p = document.getElementById("p");
+const login = document.getElementById("login");
+const p = document.getElementById("p");
 p.onmouseover = function(){
     p.style.border = "4px solid white";
 }
